@@ -1,0 +1,38 @@
+.theme-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .icon-theme{
+        display: inline-block;
+        width: 22px;
+        height: 20px;
+        background-image: url('../../assets/images/theme/icon-skin.png');
+        background-repeat: no-repeat ;
+        cursor: pointer;
+
+        &.icon-theme-blue{
+            background-position: 0 0;
+
+            &.active{
+                background-position: 0 -20px;
+            }
+        }
+
+        &.icon-theme-red{
+            background-position: -23px 0;
+
+            &.active{
+                background-position: -23px -20px;
+            }
+        }
+
+        &.icon-theme-darkblue{
+            background-position: -46px 0;
+
+            &.active{
+                background-position: -46px -20px;
+            }
+        }
+    }
+}

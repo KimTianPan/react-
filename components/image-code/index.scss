@@ -1,0 +1,124 @@
+@import './../../assets/font/macUI/iconfont.css';
+@import './../../assets/css/iframe/mixins';
+
+.image-code {
+    position: fixed;
+    top: 50%;
+    padding: 50px;
+    width: 500px;
+    height:370px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.image-container {
+    position: relative;
+}
+
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.reload-container {
+    margin: 20px 0;
+}
+
+.reload-wrapper {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #FFF;
+
+    .reload-ico {
+        margin-right: 10px;
+        font-size: 20px;
+        @include themify($themes) {
+            color: themed('theme-color');
+        }
+    }    
+}
+.reload-tips {
+    font-size: 14px;
+    color: #FFF;
+}
+
+.slider-wrpper {
+    position: relative;
+    margin: 10px 0;
+}
+
+.slider-bar {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+    background-color: #ddd;
+    border-radius: 20px;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    font-size: 24px;
+    @include themify($themes) {
+        color: themed('theme-color');
+    }
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: #fff;
+    text-align: center;
+}
+
+/* 提示信息 */
+.tips-container,
+.tips-container--active {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    transition: all 0.25s;
+    background: #fff;
+    border-radius: 5px;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.tips-container--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tips-ico {
+    margin-right: 10px;
+    color: #f5222d;
+    font-size: 20px;
+
+    &.icon-pintuzhengque{
+        color: #6bb901;
+    }
+}
+
+.tips-text {
+    color: #666;
+
+    &.tip-sucess{
+        color: #6bb901;
+    }
+
+    &.tip-fail{
+        color: #f5222d;
+    }
+}

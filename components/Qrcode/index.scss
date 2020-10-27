@@ -1,0 +1,32 @@
+.qrcode-style {
+  height: 100%;
+  position: relative;
+
+  canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.head {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.search {
+  padding-top: 10px;
+
+  .search-label {
+    padding-right: 10px;
+  }
+
+  span {
+    color: red;
+  }
+
+  .display-inline-block {
+    display: inline-block
+  }
+}

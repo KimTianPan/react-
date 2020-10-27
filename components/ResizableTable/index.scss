@@ -1,0 +1,136 @@
+@import '../../assets/css/macUI/_virable';
+@import '../../assets/css/macUI/mixins';
+
+// 设置table 列不对齐 start 
+
+.ant-table-fixed-header>.ant-table-content>.ant-table-scroll>.ant-table-body {
+  margin-top: 8px;
+}
+
+.ant-table-content {
+  .ant-table-scroll {
+    .ant-table-header {
+      .ant-table-thead>tr>th {
+        border-left: none !important;
+        border-right: 1px solid #cde0ff !important;
+
+        &:last-child {
+          border-right: none !important;
+        }
+      }
+
+    }
+  }
+}
+
+// 设置table 列不对齐 end
+#components-table-demo-resizable-column .react-resizable {
+  position: relative;
+  background-clip: padding-box;
+}
+
+#components-table-demo-resizable-column .react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  bottom: 0;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.react-resizable {
+  position: relative;
+  background-clip: padding-box;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  bottom: 0;
+  right: -5px;
+  cursor: col-resize;
+  z-index: 1;
+}
+
+.click-row-style {
+  @include themify($themes) {
+    background: themed('linear-gradient-start') !important;
+  }
+
+  color: #fff !important;
+
+  td a {
+    color: #fff;
+
+    &:hover {
+      color: #fff
+    }
+  }
+}
+
+
+.ant-table-tbody>.click-row-style:hover>td {
+  @include themify($themes) {
+    background: themed('linear-gradient-start') !important;
+
+  }
+
+  color: #fff !important;
+}
+
+/***滚动条样式start*****/
+.ant-table-fixed-header .ant-table-scroll .ant-table-header::-webkit-scrollbar-track {
+  background-color: #eef3ff !important;
+}
+
+.ant-table-fixed-header .ant-table-scroll .ant-table-header {
+  overflow-x: hidden !important;
+}
+
+.ant-table-fixed-header>.ant-table-content>.ant-table-scroll>.ant-table-body {
+  margin-top: 17px;
+}
+
+/***滚动条样式end*****/
+.ant-table-tbody {
+  tr:last-child td {
+    border-bottom: 1px solid #cde0ff !important;
+  }
+}
+
+.ant-table .ant-table-tbody>.click-row-style>td {
+  @include themify($themes) {
+    background: themed('linear-gradient-start') !important;
+
+  }
+
+  color: #fff !important;
+}
+
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+.ant-table-scroll table .ant-table-fixed-columns-in-body:not([colspan]) {
+  visibility: initial;
+}
+
+.ant-spin-container {
+  .ant-pagination {
+    display: none;
+  }
+}
+
