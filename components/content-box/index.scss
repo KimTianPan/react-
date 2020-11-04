@@ -1,0 +1,196 @@
+/*
+* content 控件样式
+* @date 2020/09/23
+* @author tianpanpan
+*/
+@import "@/assets/css/macUI/_mixins";
+@import "@/assets/css/macUI/_virable";
+
+.content {
+  height: auto !important;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+.content-box {
+  background: #fff;
+
+  h2,
+  h3,
+  h4 {
+    display: inline-block;
+  }
+
+  .container-header-list {
+    float: right;
+    // margin-top: 5px;
+
+    .container-list-items {
+      float: left;
+    }
+  }
+
+  /*查询区域*/
+  .container-action-list {
+    display: inline-block;
+
+    .container-list-items {
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+
+  .icon-font {
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      float: right;
+      border-radius: 50%;
+
+      @include themify($themes) {
+        background: themed('linear-gradient-start');
+
+      }
+
+      ;
+      margin-right: 8px;
+    }
+
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+
+    @include themify($themes) {
+      background: themed('theme-color');
+
+    }
+
+    ;
+    margin-right: 6px;
+    margin-left: 8px;
+
+
+  }
+}
+
+
+
+.container {
+  height: 100%;
+  padding: 0 10px;
+
+  &.container-level3 {
+
+    .container-header {
+      padding: 0 10px;
+
+      @include themify($themes) {
+        background-color: themed('title-bg-color');
+        border-bottom: none;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .container-header-boder {
+    // @include themify($themes) {
+    //   border-bottom: 1px solid themed('solid-color');
+    // }
+    border-bottom:1px solid $solid-color;
+  }
+
+  .container-header {
+    position: relative;
+    height: 39px;
+    line-height: 39px;
+
+
+    h2,
+    h3,
+    h4 {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 10px;
+      line-height: 36px;
+
+      @include themify($themes) {
+        color: themed('theme-color');
+      }
+    }
+
+    h2 {
+      font-size: 16px;
+
+      @include themify($themes) {
+        border-bottom: 3px solid themed('theme-color');
+      }
+    }
+
+    h3 {
+      padding-left: 10px;
+      font-size: 16px;
+
+      span {
+        display: inline-block;
+        width: 3px;
+        height: 16px;
+        position: absolute;
+        left: 0;
+        top: 12px;
+
+        @include themify($themes) {
+          background: themed('theme-color');
+        }
+      }
+    }
+
+    h4 {
+      font-size: 14px;
+    }
+
+    .container-header-list {
+      display: inline-block;
+
+      .icon {
+        margin-right: 10px;
+      }
+    }
+
+    .search-form-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: right;
+    }
+  }
+
+  .container-body {
+    height: 100%;
+    padding: 10px 0;
+
+    .container-content-list {
+      height: 100%;
+    }
+
+    &>.ant-pagination {
+      position: fixed;
+      left: 10px;
+      bottom: 8px;
+      width: calc(100% - 20px);
+      padding: 10px 0;
+
+      @include themify($themes) {
+        background-color: themed('content-bg-color');
+      }
+
+      text-align: center;
+    }
+  }
+}
